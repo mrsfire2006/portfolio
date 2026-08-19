@@ -1,0 +1,46 @@
+---
+import NavbarAstroComponent from "@/components/svelte/Navbar.svelte";
+import "../styles/global.css";
+import "@fontsource/baloo-2/800.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Mohamed — Full-Stack Developer",
+  description = "Full-stack developer building modern web applications.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.svg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={Astro.url} />
+  </head>
+
+  <body>
+    <NavbarAstroComponent client:load/>
+    <main class="min-h-dvh">
+      <slot />
+    </main>
+    <footer></footer>
+  </body>
+</html>

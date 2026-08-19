@@ -1,0 +1,139 @@
+---
+import Projects from "./Projects.astro";
+---
+
+<div id="work" class="w-full min-hdvh overflow-hidden bg-sky">
+  <section
+    class="mx-auto
+      max-w-[90%]
+      px-[8vw]
+       max-[800px]:px-[6vw]"
+  >
+    <!-- Section header -->
+    <div
+      class="grid
+        min-h-dvh
+        grid-cols-[0.8fr_1.2fr]
+        items-center
+        gap-20
+        max-[800px]:grid-cols-1
+        max-[800px]:gap-12"
+    >
+      <!-- Section visual -->
+      <!-- Section card -->
+      <div
+        class="relative
+        flex
+        aspect-square
+        w-full
+        max-w-105
+        items-center
+        justify-center
+        rounded-4xl
+        border-[3px]
+        border-navy
+        bg-yellow
+        shadow-[12px_12px_0_#172342]
+        max-[800px]:mx-auto"
+      >
+        <!-- Decorative dots -->
+        <div class="absolute left-6 top-6 flex gap-2">
+          <span class="size-3 rounded-full border-2 border-navy"></span>
+          <span class="size-3 rounded-full bg-navy"></span>
+          <span class="size-3 rounded-full border-2 border-navy"></span>
+        </div>
+
+        <div class="text-center">
+          <div
+            class="font-baloo
+            text-[clamp(5rem,9vw,8rem)]
+            font-black
+            leading-none
+            tracking-[-0.08em]
+            text-navy"
+          >
+            02
+          </div>
+
+          <p
+            class="mt-4
+            text-sm
+            font-black
+            tracking-[0.2em]
+            text-navy"
+          >
+            MY WORK
+          </p>
+        </div>
+
+        <span
+          class="absolute
+          bottom-6
+          right-6
+          font-baloo
+          text-4xl
+          font-black
+          text-navy"
+        >
+          +
+        </span>
+      </div>
+
+      <!-- Heading -->
+      <div class="min-w-0 max-w-130">
+        <p
+          class="mb-5
+            text-xs
+            font-black
+            tracking-[0.18em]
+            text-navy"
+        >
+          SELECTED WORK
+        </p>
+
+        <h2
+          class="m-0
+            font-baloo
+            text-[clamp(3rem,7vw,7rem)]
+            font-black
+            leading-[0.9]
+            tracking-[-0.06em]
+            text-navy"
+        >
+          THINGS I'VE
+          <span class="block text-yellow">BUILT.</span>
+        </h2>
+
+        <p
+          class="mt-8
+            max-w-130
+            text-lg
+            leading-[1.7]
+            text-navy"
+        >
+          Small ideas, serious execution.
+          <br />
+          Here are a few things from the workshop.
+        </p>
+        <a
+          href="#projects"
+          class="group mt-8 inline-flex w-fit items-center gap-3 rounded-full border-[3px] border-navy bg-paper px-6 py-3 text-sm font-black tracking-[0.12em] text-navy shadow-[5px_5px_0_#172342] transition-all duration-200 hover:-translate-y-1 hover:shadow-[7px_7px_0_#172342] max-[500px]:px-5 max-[500px]:py-2.5 max-[500px]:text-xs"
+        >
+          SEE MY WORK
+
+          <span
+            class="inline-block
+    text-lg
+    transition-transform
+    duration-300
+    -rotate-90
+    group-hover:rotate-0"
+          >
+            ↓
+          </span>
+        </a>
+      </div>
+    </div>
+    <Projects />
+  </section>
+</div>

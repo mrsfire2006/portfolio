@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@theme {
+  --color-cream: #fff6df;
+  --color-coral: #ff806e;
+  --color-orange: #ff9b3d;
+  --color-yellow: #ffd94f;
+  --color-sky: #6bc8e8;
+  --color-purple: #8e79d9;
+  --color-mint: #9ddfc1;
+  --color-navy: #172342;
+  --color-paper: #fffdf8;
+  --navy-shadow: 5px 5px 0 var(--navy);
+  --font-sans: "DM Sans", "DM Sans Fallback", sans-serif;
+  --font-baloo: "Baloo 2", sans-serif;
+}
+
+:root {
+  --line: 3px solid var(--color-navy);
+}
+
+* {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-sans);
+ }
+@layer components{
+  .shadow-box{
+    box-shadow: 5px 5px 0 #172342;
+  } 
+}
