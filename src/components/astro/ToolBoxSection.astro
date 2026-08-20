@@ -1,0 +1,324 @@
+---
+const frontend = [
+  {
+    name: "TypeScript",
+    initial: "T",
+    class: "-rotate-[3deg] bg-paper shadow-[5px_5px_0_#172342]",
+  },
+  {
+    name: "React",
+    initial: "R",
+    class: "rotate-[3deg] bg-yellow shadow-[5px_5px_0_#172342]",
+  },
+  {
+    name: "Astro",
+    initial: "A",
+    class: "-rotate-[2deg] bg-sky shadow-[5px_5px_0_#172342]",
+  },
+  {
+    name: "SolidJS",
+    initial: "S",
+    class: "rotate-[4deg] bg-purple text-paper shadow-[5px_5px_0_#172342]",
+    iconClass: "bg-yellow text-navy!",
+  },
+];
+
+const backend = [
+  {
+    name: "C#",
+    initial: "C",
+    class: "-rotate-[3deg] bg-sky shadow-[5px_5px_0_#172342]",
+  },
+  {
+    name: "ASP.NET",
+    initial: "A",
+    class: "rotate-[3deg] text-white bg-purple shadow-[5px_5px_0_#172342]",
+    iconClass: "text-navy!",
+  },
+  {
+    name: "Node.js",
+    initial: "N",
+    class: "-rotate-[2deg] bg-paper shadow-[5px_5px_0_#172342]",
+  },
+];
+
+const database = [
+  {
+    name: "PostgreSQL",
+    initial: "P",
+    class: "-rotate-[3deg] bg-yellow shadow-[5px_5px_0_#172342]",
+    iconClass: "bg-coral",
+  },
+  {
+    name: "SQL Server",
+    initial: "S",
+    class: "rotate-[3deg] bg-sky shadow-[5px_5px_0_#172342]",
+    iconClass: "bg-coral",
+  },
+];
+---
+
+<div class="w-full bg-mint">
+  <section
+    class="mx-auto
+    flex
+    min-h-dvh
+    max-w-[90%]
+    flex-col
+    items-center
+    gap-14
+    px-[8vw]
+    py-32
+    max-[800px]:gap-10
+    max-[800px]:px-[6vw]"
+  >
+    <!-- Section Card -->
+    <div
+      class="relative
+      flex
+      aspect-square
+      w-full
+      max-w-105
+      items-center
+      justify-center
+      rounded-4xl
+      border-[3px]
+      border-navy
+      bg-yellow
+      shadow-[12px_12px_0_#172342]"
+    >
+      <!-- Decorative dots -->
+      <div class="absolute left-6 top-6 flex gap-2">
+        <span class="size-3 rounded-full bg-navy"></span>
+        <span class="size-3 rounded-full border-2 border-navy"></span>
+        <span class="size-3 rounded-full border-2 border-navy"></span>
+      </div>
+
+      <div class="text-center">
+        <div
+          class="font-baloo
+          text-[clamp(5rem,9vw,8rem)]
+          font-black
+          leading-none
+          tracking-[-0.08em]
+          text-navy"
+        >
+          03
+        </div>
+
+        <p
+          class="mt-4
+          text-sm
+          font-black
+          tracking-[0.2em]
+          text-navy"
+        >
+          TOOLS I BUILD WITH
+        </p>
+      </div>
+
+      <span
+        class="absolute
+        bottom-6
+        right-6
+        font-baloo
+        text-4xl
+        font-black
+        text-navy"
+      >
+        +
+      </span>
+    </div>
+
+    <!-- Stack Board -->
+    <div
+      class="relative
+      flex
+      w-full
+      max-w-225
+      justify-between
+      gap-8
+      py-8
+      pb-16
+      max-[800px]:grid
+      max-[800px]:grid-cols-2"
+    >
+      <!-- Frontend -->
+      <div class="flex flex-col items-start gap-4">
+        <span
+          class="mb-2
+            text-[0.65rem]
+            font-black
+            tracking-[0.14em]"
+        >
+          FRONTEND
+        </span>
+
+        {
+          frontend.map((tech) => (
+            <div
+              class={`
+                flex
+                items-center
+                gap-2.5
+                rounded-[14px]
+                border-[3px]
+                border-navy
+                px-4
+                py-2.5
+                font-baloo
+                text-[1.2rem]
+                font-black
+                shadow-[4px_5px_0_var(--navy)]
+                ${tech.class}
+              `}
+            >
+              <b
+                class={`
+                  grid
+                  h-7.5
+                  w-7.5
+                  place-items-center
+                  rounded-full
+                  bg-coral
+                  text-paper
+                  ${tech.iconClass ?? ""}
+                `}
+              >
+                {tech.initial}
+              </b>
+
+              {tech.name}
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Backend -->
+      <div class="flex flex-col items-start gap-4">
+        <span
+          class="mb-2
+            text-[0.65rem]
+            font-black
+            tracking-[0.14em]"
+        >
+          BACKEND
+        </span>
+
+        {
+          backend.map((tech) => (
+            <div
+              class={`
+                flex
+                items-center
+                gap-2.5
+                rounded-[14px]
+                border-[3px]
+                border-navy
+                px-4
+                py-2.5
+                font-baloo
+                text-[1.2rem]
+                font-black
+                ${tech.class}
+
+              `}
+            >
+              <b
+                class={`
+                  grid
+                  h-7.5
+                  w-7.5
+                  place-items-center
+                  rounded-full
+                  bg-coral
+                  text-paper
+                                  ${tech.iconClass}
+                `}
+              >
+                {tech.initial}
+              </b>
+
+              {tech.name}
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Database -->
+      <div class="flex flex-col items-start gap-4">
+        <span
+          class="mb-2
+            text-[0.65rem]
+            font-black
+            tracking-[0.14em]"
+        >
+          DATABASE
+        </span>
+
+        {
+          database.map((tech) => (
+            <div
+              class={`
+                flex
+                items-center
+                gap-2.5
+                rounded-[14px]
+                border-[3px]
+                border-navy
+                px-4
+                py-2.5
+                font-baloo
+                text-[1.2rem]
+                font-black
+                ${tech.class}
+              `}
+            >
+              <b
+                class={`
+                  grid
+                  h-7.5
+                  w-7.5
+                  place-items-center
+                  rounded-full
+                  text-paper
+                  ${tech.iconClass}
+                `}
+              >
+                {tech.initial}
+              </b>
+
+              {tech.name}
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Scribble -->
+      <div
+        class="self-center
+          rotate-[8deg]
+          font-baloo
+          text-[2rem]
+          font-black
+          leading-[0.85]
+          text-purple
+          max-[800px]:absolute
+          max-[800px]:bottom-0
+          max-[800px]:right-0"
+      >
+        mix
+        <br />
+        match
+        <br />
+        ship
+
+        <span class="block
+            text-[3rem]
+            text-coral">
+          ↘
+        </span>
+      </div>
+    </div>
+  </section>
+</div>
